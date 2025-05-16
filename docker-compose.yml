@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  consumer:
+    build:
+      context: .
+      dockerfile: apps/Consumer/dockerfile
+    container_name: consumer-app
+    depends_on:
+      - producer
+
+  producer:
+    build:
+      context: .
+      dockerfile: apps/Producer/dockerfile
+    container_name: producer-app
