@@ -1,0 +1,13 @@
+FROM golang:1.23
+
+WORKDIR /app/
+
+COPY apps/Consumer/ apps/Consumer/
+COPY apps/Producer/ apps/Producer/
+COPY libs/Calculator/ libs/Calculator/
+
+COPY go.work .
+
+RUN go build producer
+
+CMD ["./producer"]

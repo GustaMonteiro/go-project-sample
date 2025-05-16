@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello world!")
-
+	fmt.Println("Hello from Consumer")
 	fmt.Println(calculator.Multiply(3, 5))
 }
